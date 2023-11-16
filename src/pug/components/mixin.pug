@@ -1,0 +1,56 @@
+-
+    let mainMenu = [
+        {
+            name: "About ",
+            url: "#"
+        },
+        {
+            name: "Features",
+            url: "#"
+        },
+        {
+            name: "Pricing",
+            url: "#"
+        },
+        {
+            name: "Testimonials",
+            url: "#"
+        },
+        {
+            name: "Help",
+            url: "#"
+        }
+    ]
+    
+mixin menu (items)
+    ul.main-menu.navbar-nav
+        for item in items
+            li.nav-item
+                a(href=item.url).nav-link #{item.name}
+
+-
+    let indicators = {
+        user: {
+            use: "#user",
+            bold: "90+",
+            paragraph: "Users",
+        },
+        location: {
+            use: "#location",
+            bold: "30+",
+            paragraph: "Locations",
+        },
+        server: {
+            use: "#server",
+            bold: "50+",
+            paragraph: "Servers",
+        },
+    }
+
+mixin indicator (oneInd)
+    .svg-bg 
+        svg 
+            use(xlink:href=oneInd.use)
+    .inform-cont 
+        b #{oneInd.bold}
+        p #{oneInd.paragraph}

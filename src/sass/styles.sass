@@ -1,0 +1,93 @@
+@import components/mixin
+    
+html,
+body
+    font-size: 13px
+    +media(768)
+        font-size: 16px
+
+.main-menu
+    li
+        padding: 0 0.81rem
+
+.navbar-toggler
+    height: 1.7rem
+    span
+        position: absolute
+        left: 0
+        top: 50%
+        width: 2.2rem
+        height: 3.5px
+        transform: translateY(-50%)
+        transition: all 0.5s ease
+        background-color: $accent
+        &:first-child
+            transform: rotate(-45deg)
+        &:nth-child(2)
+            display: none
+        &:last-child
+            transform: rotate(45deg)
+    &.collapsed
+        span
+            &:first-child
+                top: 0
+                transform: rotate(0)
+            &:nth-child(2)
+                display: block
+            &:last-child
+                top: 100%
+                transform: rotate(0) translateY(-100%)
+            
+.btn-style-round
+    display: inline-block
+    padding: 0.57rem 2.7rem
+    font-weight: 700
+    text-decoration: none
+    border-radius: 23px
+    border-collapse: collapse
+    border: 2px solid $accent
+    color: $accent
+    transition: all 0.5s ease
+    &:hover
+        color: #fff
+        background-color: $accent
+        box-shadow: 0 15px 27px rgba(245, 56, 56, 0.35)
+
+.btn-style-square
+    padding: 1rem 5rem
+    border-radius: 10px
+
+.btn-sign-in
+    display: inline-block
+    padding: 0.57rem 2.7rem
+    color: $secondary
+    font-weight: 700
+    text-decoration: none
+    border-radius: 23px
+    border-collapse: collapse
+    transition: all 0.5s ease
+    &:hover
+        color: $accent
+        border-collapse: collapse
+        box-shadow: 0 15px 27px rgba(245, 56, 56, 0.35)
+
+
+
+
+
+.svg-bg
+    position: relative
+    height: 3.44rem
+    width: 3.44rem
+    background-color: #ffecec
+    border-radius: 50%
+    svg
+        position: absolute
+        top: 50%
+        left: 50%
+        height: 1.19rem
+        width: 1.19rem
+        fill: $accent
+        transform: translate(-50%, -50%)
+        
+

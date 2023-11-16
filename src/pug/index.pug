@@ -1,0 +1,56 @@
+doctype html
+html(lang="en")
+    head
+        include components/mixin
+
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet")
+        link(rel="stylesheet", href="css/styles.css")
+        link(rel="icon", href="../img/logo-s.png")
+        title LaslesVPN
+    body
+        .d-none 
+            include ../img/sprite.svg 
+        header
+            .container
+                nav.d-flex.justify-content-between.navbar.navbar-expand-lg
+                    a.logo.navbar-brand
+                        img(src="img/logo.png", alt="logo")
+                    .navbar-toggler.border-0.position-relative(type="button", data-bs-toggle="collapse", data-bs-target="#navbarTogglerDemo02")
+                        span
+                        span
+                        span
+                    #navbarTogglerDemo02.main-menu.collapse.navbar-collapse.justify-content-center
+                        +menu(mainMenu)
+                    .sign-btn.d-flex.gap-1 
+                        a(href="#").btn-sign-in Sign In
+                        a(href="#").btn-style-round Sign Up
+            .container 
+                .row 
+                    .col-12.col-lg-6  
+                        h1
+                            | Want anything to be easy with 
+                            b
+                                | LaslesVPN.
+                        p Provide a network for all your needs with ease and fun using LaslesVPN discover interesting features from us.
+                        a(href="#").btn-style-round.btn-style-square Get Started 
+                            
+                    .col-12.col-lg-6.w-50
+                        img(src="../img/header-img.png", alt="LaslesVPN") 
+            .container 
+                .row 
+                    .col-12.col-lg-4.d-flex.column-gap-4.justify-content-center
+                        +indicator(indicators.user)
+                    .col-12.col-lg-4.d-flex.column-gap-4.justify-content-center
+                        +indicator(indicators.location)
+                    .col-12.col-lg-4.d-flex.column-gap-4.justify-content-center
+                        +indicator(indicators.server)
+            
+                        
+
+
+        script(src="js/scripts.js")
+         
