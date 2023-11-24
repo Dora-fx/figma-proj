@@ -16,7 +16,7 @@ html(lang="en")
             include ../img/sprite.svg 
         header
             .container
-                nav.d-flex.justify-content-between.navbar.navbar-expand-lg
+                nav.topNavigation.d-flex.justify-content-between.navbar.navbar-expand-lg
                     a.logo.navbar-brand
                         img(src="img/logo.png", alt="logo")
                     .navbar-toggler.border-0.position-relative(type="button", data-bs-toggle="collapse", data-bs-target="#navbarTogglerDemo02")
@@ -30,7 +30,7 @@ html(lang="en")
                         a(href="#").btn-style-round Sign Up
             .container 
                 .row 
-                    .col-12.col-lg-6  
+                    .header-info.col-12.col-lg-6  
                         h1
                             | Want anything to be easy with 
                             b
@@ -38,17 +38,45 @@ html(lang="en")
                         p Provide a network for all your needs with ease and fun using LaslesVPN discover interesting features from us.
                         a(href="#").btn-style-round.btn-style-square Get Started 
                             
-                    .col-12.col-lg-6.w-50
-                        img(src="../img/header-img.png", alt="LaslesVPN") 
+                    .col-12.col-lg-6
+                        img.w-100(src="../img/img-header.png", alt="LaslesVPN") 
             .container 
-                .row 
-                    .col-12.col-lg-4.d-flex.column-gap-4.justify-content-center
+                .row.indicators-block
+                    .col-12.col-lg-4.d-flex.column-gap-4.justify-content-center.stick
                         +indicator(indicators.user)
-                    .col-12.col-lg-4.d-flex.column-gap-4.justify-content-center
+                    .col-12.col-lg-4.d-flex.column-gap-4.justify-content-center.stick
                         +indicator(indicators.location)
                     .col-12.col-lg-4.d-flex.column-gap-4.justify-content-center
                         +indicator(indicators.server)
-            
+            .container.main-benef 
+                .row 
+                    .col-12.col-lg-6
+                        img.w-100(src="../img/img-main.png", alt="LaslesVPN")
+                    .col-12.col-lg-6
+                        .header-style
+                            h2 We Provide Many Features You Can Use
+                            p You can explore the features that we provide with fun and have their own functions each feature.
+                            .benefits
+                                p Powerfull online protection.
+                                p Internet without borders.
+                                p Supercharged VPN
+                                p No specific time limits.
+            .container-fluid.main-plans
+                .header-style.text-center.m-auto 
+                    h2 Choose Your Plan
+                    p Let's choose the package that is best for you and explore it happily and cheerfully.
+                .container.d-flex.justify-content-center.gap-5
+                    +card(plans.first)
+                    +card(plans.second)
+                    +card(plans.third)
+            .container.header-style.text-center 
+                h2 Huge Global Network of Fast VPN
+                p See LaslesVPN everywhere to make it easier for you when you move locations.
+            .container
+                img.mx-auto.d-block(src="../img/main-map.png", alt="Global Network") 
+                
+                
+
                         
 
 

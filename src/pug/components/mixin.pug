@@ -23,9 +23,9 @@
     ]
     
 mixin menu (items)
-    ul.main-menu.navbar-nav
+    ul.navbar-nav.d-flex.gap-4
         for item in items
-            li.nav-item
+            li
                 a(href=item.url).nav-link #{item.name}
 
 -
@@ -54,3 +54,59 @@ mixin indicator (oneInd)
     .inform-cont 
         b #{oneInd.bold}
         p #{oneInd.paragraph}
+
+- 
+    let plans = {
+        first: {
+            src: "img/planFree.png",
+            alt: "free plan",
+            header: "Free Plan",
+            benefits: [
+                "Unlimited Bandwitch",
+                "Encrypted Connection",
+                "No Traffic Logs",
+                "Works on All Devices",
+            ],
+            price: "Free",
+            href: "#",
+        },
+        second: {
+            src: "img/planStandart.png",
+            alt: "Standard Plan",
+            header: "Standard Plan",
+            benefits: [
+                "Unlimited Bandwitch",
+                "Encrypted Connection",
+                "Yes Traffic Logs",
+                "Works on All Devices",
+                "Connect Anyware",
+            ],
+            price: "$9 / mo",
+            href: "#",
+        },
+        third: {
+            src: "img/planPremium.png",
+            alt: "Premium Plan",
+            header: "Premium Plan",
+            benefits: [
+                "Unlimited Bandwitch",
+                "Encrypted Connection",
+                "Yes Traffic Logs",
+                "Works on All Devices",
+                "Connect Anyware",
+                "Get New Features",
+            ],
+            price: "$12 / mo",
+            href: "#",
+        }
+    }
+mixin card (oneCard)
+    .card-style
+        .card-img 
+            img(src=oneCard.src, alt=oneCard.alt)
+        h3 #{oneCard.header}
+        .card-benefits
+            for benefit in oneCard.benefits 
+                p #{benefit}
+        p #{oneCard.price}
+        a(href=oneCard.href).btn-style-round Select 
